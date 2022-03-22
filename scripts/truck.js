@@ -4,7 +4,7 @@
     let App = window.App || {};
 
     function Truck(truckId, db) {
-        this.truckId = trickId;
+        this.truckId = truckId;
         this.db = db;
     }
 
@@ -27,7 +27,7 @@ Truck.prototype.printOrders = function () {
     // go though the list of emails and get he associated order
     customerIdArray.forEach(function (id) {
         console.log(this.db.get(id));
-    });
+    }.bind(this));
 }
 
     App.Truck = Truck;
