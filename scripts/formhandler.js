@@ -2,9 +2,12 @@
     'use strict';
 
     let App = window.App || {};
+    let $ = window.jQuery;
 
     function FormHandler() {
-        // do stuff here
+        if (!selector) {
+            throw new Error('No selector Provided!');
+        }
     }
 
     App.FormHandler = FormHandler;
