@@ -2,14 +2,13 @@
     'use strict';
 
     let App = window.App || {};
-    let $ = window.jQuery;
+    var $ = window.jQuery;
 
     function FormHandler(selector) {
         //do stuff
         if (!selector) {
             throw new Error('No selector Provided!');
         }
-
 
         this.$formElement = $(selector);
         if (this.$formElement.length == 0) {
@@ -22,7 +21,12 @@
         this.$formElement.on('submit', function(event) {
             event.preventDefault();
 
-            let data = $(this).serializeArray();
+            // copy all info from form into the data variable
+            let data = {};
+            $(this).serializeArray().forEach(function (item) {
+                data[item.name] = item.value;
+                console.log(item.name + ' is' + item.value);
+            });
             console.log(data);
         });
     }
