@@ -16,7 +16,7 @@
         }
     }
 
-    FormHandler.prototype.addSubmitHandler = function () {
+    FormHandler.prototype.addSubmitHandler = function (func) {
         console.log('Setting the submit hander for the form...');
         this.$formElement.on('submit', function(event) {
             event.preventDefault();
@@ -28,8 +28,9 @@
                 console.log(item.name + ' is' + item.value);
             });
             console.log(data);
+            func(data);
         });
-    }
+    };
 
     App.FormHandler = FormHandler;
     window.App = App;
