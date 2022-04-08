@@ -29,6 +29,9 @@
             });
             console.log(data);
             func(data);
+
+            this.reset();
+            this.elements[0].focus();
         });
     };
 
