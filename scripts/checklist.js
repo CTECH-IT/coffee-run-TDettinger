@@ -49,7 +49,7 @@
 
         let $checkbox = $('<input></input>', {
             type: 'checkbox',
-            value: coffeeOrder.emailAdress
+            value: coffeeOrder.emailAddress
         });
 
 
@@ -58,7 +58,7 @@
             discription += coffeeOrder.flavor + ' ';
         }
         discription += coffeeOrder.coffee + ', ';
-        discription += ' (' + coffeeOrder.emailAdress + ')';
+        discription += ' (' + coffeeOrder.emailAddress + ')';
         discription += ' [' + coffeeOrder.strength + 'x]';
 
         $label.append($checkbox);

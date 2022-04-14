@@ -9,8 +9,8 @@
     }
 
     Truck.prototype.createOrder = function (order) {
-        console.log('Adding order for ' + order.emailAdress);
-        this.db.add(order.emailAdress, order);
+        console.log('Adding order for ' + order.emailAddress);
+        this.db.add(order.emailAddress, order);
     }
 
     Truck.prototype.deliverOrder = function (customerId) {
@@ -20,7 +20,7 @@
 
 Truck.prototype.printOrders = function () {
 
-    // get all the email adresses (keys)
+    // get all the email addresses (keys)
     let customerIdArray = Object.keys(this.db.getAll());
 
     console.log('Truck #' + this.truckId + ' has pending orders:');
