@@ -22,7 +22,7 @@
         }.bind(this));
     };
 
-    // the meathod that adds a new row to the checklist
+    // the method that adds a new row to the checklist
     CheckList.prototype.addRow = function (coffeeOrder) {
         //remove any existing rows that match the email address
         this.removeRow(coffeeOrder.emailAddress);
@@ -32,7 +32,7 @@
         this.$element.append(rowElement.$element);
     };
 
-    //remove a dow identified by an email address
+    //remove a row identified by an email address
     CheckList.prototype.removeRow = function (email) {
         this.$element
         .find('[value="' + email + '"]')
