@@ -23,6 +23,17 @@
         });
     };
 
+    RemoteDataStore.prototype.get = function (key, cb) {
+        $.get(this.serverUrl + '?emailAddress=' + key, function (serverResponse) {
+            console.log(serverReponse);
+            cb(serverReponse);
+        });
+    };
+
+    RemoteDataStore.prototype.remove = function (key) {
+        $.ajax(this.serverUrl + '?emailAddress=' + key, { type: 'DELETE'});
+    };
+
     App.RemoteDataStore = RemoteDataStore;
     window.App = App;
 
