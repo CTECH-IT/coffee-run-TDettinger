@@ -7,6 +7,7 @@
     let App = window.App;
     let Truck = App.Truck;
     let DataStore = App.DataStore;
+    let RemoteDataStore = App.RemoteDataStore;
     let FormHandler = App.FormHandler;
     let CheckList = App.CheckList;
     let Validation = App.Validation;
